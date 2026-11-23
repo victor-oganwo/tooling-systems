@@ -1,10 +1,17 @@
 {
   "name": "tooling-systems",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Env & Branching: a tiny MongoDB task API with three environments",
+  "private": true,
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js",
+    "start:staging": "node src/server.js staging",
+    "start:preprod": "node src/server.js preprod",
+    "start:prod": "node src/server.js prod",
+    "test": "node --test",
     "prepare": "husky"
   },
   "keywords": [],
@@ -15,5 +22,9 @@
     "@commitlint/cli": "^21.2.4",
     "@commitlint/config-conventional": "^21.2.4",
     "husky": "^9.1.7"
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "mongoose": "^9.12.3"
   }
 }

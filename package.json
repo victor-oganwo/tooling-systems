@@ -7,6 +7,10 @@
     "node": ">=24"
   },
   "scripts": {
+    "start": "node src/server.js",
+    "start:staging": "node src/server.js staging",
+    "start:preprod": "node src/server.js preprod",
+    "start:prod": "node src/server.js prod",
     "test": "node --test",
     "prepare": "husky"
   },
@@ -20,6 +24,7 @@
     "husky": "^9.1.7"
   },
   "dependencies": {
+    "express": "^5.3.0",
     "mongoose": "^9.12.3"
   }
 }

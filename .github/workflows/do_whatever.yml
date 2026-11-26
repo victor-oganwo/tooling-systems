@@ -1,0 +1,15 @@
+name : we are doing something
+
+on:
+  push:
+    branches:
+      -main
+
+  jobs:
+    do-whatever:
+      runs-on: ubuntu-latest
+
+    steps:
+        - name: do whatever
+          run: echo "doing whatever"
+          shell: bash
